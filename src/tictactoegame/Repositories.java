@@ -20,12 +20,13 @@ public class Repositories {
         if (choice == 1) {
             userChoiceLetter = 'X';
             cpuAllocateLetter = 'O';
-            System.out.println("USER CHOOSE LETTER : " + userChoiceLetter);
+            System.out.println("USER CHOOSE LETTER : " + userChoiceLetter + "\n ::--- Start Game ::");
+            showBoard();
             return;
         }
         userChoiceLetter = '0';
         cpuAllocateLetter = 'X';
-        System.out.println("USER CHOOSE LETTER : " + userChoiceLetter);
+        System.out.println("USER CHOOSE LETTER : " + userChoiceLetter + "\n ::--- Start Game ::");
     }
 
     void showBoard() {
@@ -47,5 +48,16 @@ public class Repositories {
             return;
         }
         System.out.println("index already Full choose another Location");
+    }
+
+    public void tossWhoWinFirst() {
+        System.out.println("TOSS ::\nCHOOSE 1] HEAD \nCHOOSE 2] TAILS");
+        int userTossChoose = scan.nextInt();
+        int toss = (int) (Math.random() * 2) + 1;
+        if (toss == userTossChoose){
+            System.out.println("USER WIN THE TOSS \n PLAY USER");
+            return;
+        }
+        System.out.println("SORRY ! LOSS THE TOSS \n PLAY CPU");
     }
 }
