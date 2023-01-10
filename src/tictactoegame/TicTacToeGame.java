@@ -13,6 +13,7 @@ public class TicTacToeGame {
         repositoriesObject.createBoard();
         repositoriesObject.choiceLetter();
         repositoriesObject.showBoard();
+        repositoriesObject.tossWhoFirstPay();
         while (Winner == "play"){
             repositoriesObject.playGame();
             repositoriesObject.showBoard();

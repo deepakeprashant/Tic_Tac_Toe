@@ -27,6 +27,16 @@ public class Repositories {
         cpuAllocateLetter = 'X';
         System.out.println("USER CHOOSE LETTER : " + userChoiceLetter);
     }
+    void tossWhoFirstPay(){
+        System.out.println("Toss ::\n Choose 1] HEAD \n Choose 2] TAIL");
+        int tossChoose = scan.nextInt();
+        int tossWin = (int) (Math.random()*2)+1;
+        if (tossWin == tossChoose){
+            System.out.println("USER WIN THE TOSS\n USER PLAY");
+            return;
+        }
+        System.out.println("SORRY ! LOSS THE TOSS USER\n CPU PLAY");
+    }
 
     void showBoard() {
         System.out.println("|---|---|---|");
